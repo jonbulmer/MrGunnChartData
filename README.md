@@ -4,9 +4,8 @@ Web API that shares chart data in json format
 Output is a json file
 
 Fields 
-
-Date 
-PLS price
-TIME Dividend price
-PLS earned for 100000 Time
+- Date 
+- PLS price
+- TIME Dividend price
+- PLS earned for 100000 Time
 
