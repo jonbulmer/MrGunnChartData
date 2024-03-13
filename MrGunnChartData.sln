@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrGunnChartData.Service", "MrGunnChartData.Service\MrGunnChartData.Service.csproj", "{E9B607B8-900B-4B0E-969C-54A7376CB4F9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrGunnChartData.DataLayer", "MrGunnChartData.DataLayer\MrGunnChartData.DataLayer.csproj", "{36DAEAFA-8CC3-4D12-B4B7-087B9459AECC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{3EE407F5-E5B1-4399-9F94-74A9CC2C7F00}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\plsTimeChart.json = Resources\plsTimeChart.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9B607B8-900B-4B0E-969C-54A7376CB4F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9B607B8-900B-4B0E-969C-54A7376CB4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9B607B8-900B-4B0E-969C-54A7376CB4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9B607B8-900B-4B0E-969C-54A7376CB4F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36DAEAFA-8CC3-4D12-B4B7-087B9459AECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36DAEAFA-8CC3-4D12-B4B7-087B9459AECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36DAEAFA-8CC3-4D12-B4B7-087B9459AECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36DAEAFA-8CC3-4D12-B4B7-087B9459AECC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE6044D2-6F90-4271-A71C-D4C5F01661B5}
+	EndGlobalSection
+EndGlobal

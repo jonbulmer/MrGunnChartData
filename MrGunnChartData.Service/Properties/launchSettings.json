@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "MrGunnChartData.Service": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:54857;http://localhost:54858"
+    }
+  }
+}
