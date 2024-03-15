@@ -11,3 +11,6 @@
 /MrGunnChartData.DataLayer/obj
 /MrGunnChartData.Service/bin/Debug/net6.0
 /MrGunnChartData.Service/obj
+/MrGunnChartData.Service/Properties/PublishProfiles
+/MrGunnChartData.DataLayer/bin/Release/net6.0
+/MrGunnChartData.Service/bin/Release/net6.0
