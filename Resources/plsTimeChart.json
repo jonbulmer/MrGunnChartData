@@ -685,6 +685,20 @@
       "TimeDividendPrice": "0.003499",
       "PlsEarned100KTime": "606",
       "PlsReturn": "16.12"
-    }
+    },
+    {
+      "Date": "2024-03-14",
+      "PlsPrice": "0.0001571",
+      "TimeDividendPrice": "0.003031",
+      "PlsEarned100KTime": "882",
+      "PlsReturn": "14.82"
+    },
+	{
+	  "Date":"2024-03-15",
+      "PlsPrice":"0.0001492",
+      "TimeDividendPrice":"0.002864",
+	  "PlsEarned100KTime": "674",
+      "PlsReturn":"14.18"
+  }
   ]
 }

@@ -13,10 +13,8 @@ namespace MrGunnChartData.DataLayer
         {
             // I need code to a hook into the the contract calls to get the data
 
-            //here I am working out where I can host data from the Time contract
-
             var result = new List<PlsTimeDataDto>();
-            result.Add(new PlsTimeDataDto { Date = new DateTime(2024, 12, 7), PlsEarned100KTime = 1.1, PlsPrice = 2.2, TimeDividendPrice = 3.3 });
+            
             return ReadAndReturnJsonData("plsTimeChart");
         }
 
@@ -41,7 +39,7 @@ namespace MrGunnChartData.DataLayer
 
             string currentdirectory = Directory.GetParent(System.Environment.CurrentDirectory).FullName;
 
-            var filepath = currentdirectory + "\\Resources\\" + jsonFileName + ".json";
+            var filepath = currentdirectory + "/Resources/" + jsonFileName + ".json";
 
 
             using (StreamReader r = new StreamReader(filepath))

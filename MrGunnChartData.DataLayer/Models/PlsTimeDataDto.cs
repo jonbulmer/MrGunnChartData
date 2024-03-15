@@ -9,11 +9,11 @@ namespace MrGunnChartData.DataLayer
     {
         public DateTime Date { get; set; }
 
-        public double PlsPrice { get; set; }
+        public float PlsPrice { get; set; }
 
-        public double TimeDividendPrice { get; set; }
+        public float TimeDividendPrice { get; set; }
 
-        public double PlsEarned100KTime { get; set; }
+        public long PlsEarned100KTime { get; set; }
         public double PlsReturn { get; set; }
     }
 }
