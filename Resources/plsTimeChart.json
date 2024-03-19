@@ -699,6 +699,34 @@
       "TimeDividendPrice":"0.002864",
 	  "PlsEarned100KTime": "674",
       "PlsReturn":"14.18"
+  },
+  {
+    "Date":"2024-03-16",
+    "PlsPrice":"0.0001452",
+    "TimeDividendPrice":"0.002991",
+	"PlsEarned100KTime": "592",	
+    "PlsReturn":"13.88"
+  },
+  {
+    "Date":"2024-03-17",
+    "PlsPrice":"0.0001270",
+    "TimeDividendPrice":"0.002991",
+	"PlsEarned100KTime": "1001",
+    "PlsReturn":"12.27"
+  },
+  {
+    "Date":"2024-03-18",
+    "PlsPrice":"0.0001297",
+    "TimeDividendPrice":"0.002956",
+	"PlsEarned100KTime": "2446",
+    "PlsReturn":"12.85"
+  },
+  {
+    "Date":"2024-03-19",
+    "PlsPrice":"0.0001216",
+    "TimeDividendPrice":"0.002891",
+	"PlsEarned100KTime":"738",
+    "PlsReturn":"12.16"
   }
   ]
 }

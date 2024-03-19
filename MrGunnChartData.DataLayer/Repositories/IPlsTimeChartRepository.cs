@@ -9,5 +9,6 @@ namespace MrGunnChartData.DataLayer
     public interface IPlsTimeChartRepository
     {
         List<PlsTimeDataDto> ReadPlsTimeChartData();
+        string ReturnJson(string jsonFileName);
     }
 }

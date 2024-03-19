@@ -10,7 +10,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{3EE407F5-E5B1-4399-9F94-74A9CC2C7F00}"
 	ProjectSection(SolutionItems) = preProject
 		Resources\plsTimeChart.json = Resources\plsTimeChart.json
+		Resources\TimeContractAbi.json = Resources\TimeContractAbi.json
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MrGunnChartData.EvmLayer", "MrGunnChartData.EvmLayer\MrGunnChartData.EvmLayer.csproj", "{12668AE9-6C4E-4BEF-8C7F-73861F7AFB85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MrGunnChartData.EvmLayer.Tests", "MrGunnChartData.EvmLayer.Tests\MrGunnChartData.EvmLayer.Tests.csproj", "{D7641633-BC24-4A45-9A0D-EEEF694DC609}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +31,14 @@ Global
 		{36DAEAFA-8CC3-4D12-B4B7-087B9459AECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36DAEAFA-8CC3-4D12-B4B7-087B9459AECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36DAEAFA-8CC3-4D12-B4B7-087B9459AECC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12668AE9-6C4E-4BEF-8C7F-73861F7AFB85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12668AE9-6C4E-4BEF-8C7F-73861F7AFB85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12668AE9-6C4E-4BEF-8C7F-73861F7AFB85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12668AE9-6C4E-4BEF-8C7F-73861F7AFB85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7641633-BC24-4A45-9A0D-EEEF694DC609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7641633-BC24-4A45-9A0D-EEEF694DC609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7641633-BC24-4A45-9A0D-EEEF694DC609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7641633-BC24-4A45-9A0D-EEEF694DC609}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

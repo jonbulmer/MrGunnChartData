@@ -32,7 +32,7 @@ namespace MrGunnChartData.DataLayer
             return chartPoints;
         }
 
-        private string ReturnJson(string jsonFileName)
+        public string ReturnJson(string jsonFileName)
         {
             var result = "";
             
