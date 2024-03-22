@@ -1,14 +1,29 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Text.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Http;
+using System.Net;
+using MrGunnChartData.Utilities;
+using MrGunnChartData.EvmLayer;
 
 namespace MrGunnChartData.DataLayer
 {
     public class PlsTimeChartRepository : IPlsTimeChartRepository
     {
+
+        private readonly IJsonUtility _jsonUtility;
+        private readonly IReadContract _readContract;
+
+        public PlsTimeChartRepository(IJsonUtility jsonUtility, IReadContract readContract)
+        {
+            _jsonUtility = jsonUtility;
+            _readContract = readContract;
+        }
         public List<PlsTimeDataDto> ReadPlsTimeChartData()
         {
             // I need code to a hook into the the contract calls to get the data
@@ -18,9 +33,38 @@ namespace MrGunnChartData.DataLayer
             return ReadAndReturnJsonData("plsTimeChart");
         }
 
+        public void AddPlsTimeChartData()
+        {
+            var currentLiquidity = GetCurrentLiquidyParirs();
+
+            var timeDividendPrice = currentLiquidity.Pairs.First().PriceUsd;
+            var plsPrice = timeDividendPrice / currentLiquidity.Pairs.First().PriceNative;
+
+            var originalPlsTimeData = ReadAndReturnJsonData("plsTimeChart");
+            var lastPlsEarned = originalPlsTimeData.Last().PlsEarned100KTime;
+            var newPlsEarned = _readContract.ReturnPlsEarned100KTime(lastPlsEarned);
+
+            originalPlsTimeData.Add(new PlsTimeDataDto() 
+                    { 
+                        Date = DateTime.Now,
+                        PlsEarned100KTime = newPlsEarned, 
+                        PlsPrice = plsPrice, 
+                        PlsReturn = plsPrice * newPlsEarned, 
+                        TimeDividendPrice = timeDividendPrice  
+                    });
+
+            var jsonToOutput = JsonConvert.SerializeObject(originalPlsTimeData, Formatting.Indented);
+
+            string currentdirectory = Directory.GetParent(System.Environment.CurrentDirectory).FullName;
+
+            var filepath = currentdirectory + "/Resources/" + "plsTimeChart" + ".json";
+
+            File.WriteAllText(filepath , jsonToOutput);
+        }
+
         private List<PlsTimeDataDto> ReadAndReturnJsonData(string jsonFileName)
         {
-            var jsonChart = ReturnJson(jsonFileName);
+            var jsonChart = _jsonUtility.ReturnJson(jsonFileName);
 
             var chartPoints = JsonConvert.DeserializeObject<PlsTimeDataList>(jsonChart).plsTimeDataDtos.ToList();
             
@@ -32,22 +76,29 @@ namespace MrGunnChartData.DataLayer
             return chartPoints;
         }
 
-        public string ReturnJson(string jsonFileName)
+        public LiquidityPairs GetCurrentLiquidyParirs()
         {
-            var result = "";
-            
+            var url = "https://api.dexscreener.com/latest/dex/pairs/pulsechain/0xEFab2c9c33C42960F2fF653aDb39dC5C4c10630e";
 
-            string currentdirectory = Directory.GetParent(System.Environment.CurrentDirectory).FullName;
+            var json = new WebClient().DownloadString(url);
 
-            var filepath = currentdirectory + "/Resources/" + jsonFileName + ".json";
-
-
-            using (StreamReader r = new StreamReader(filepath))
-            {
-                result = r.ReadToEnd();
-            }
+            LiquidityPairs result = JsonConvert.DeserializeObject<LiquidityPairs>(json);
 
             return result;
         }
     }
+
+    public class LiquidityPairs
+    {
+        public string SchemaVersion { get; set; }
+        public List<Pairs> Pairs { get; set; }
+        //public List<Pair> { get; set; }
+    }
+
+    public class Pairs
+    {
+        public float PriceNative { get; set; }
+        public float PriceUsd { get; set; }
+    }
+
 }

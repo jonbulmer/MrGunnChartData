@@ -13,9 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{
 		Resources\TimeContractAbi.json = Resources\TimeContractAbi.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MrGunnChartData.EvmLayer", "MrGunnChartData.EvmLayer\MrGunnChartData.EvmLayer.csproj", "{12668AE9-6C4E-4BEF-8C7F-73861F7AFB85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrGunnChartData.EvmLayer", "MrGunnChartData.EvmLayer\MrGunnChartData.EvmLayer.csproj", "{12668AE9-6C4E-4BEF-8C7F-73861F7AFB85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MrGunnChartData.EvmLayer.Tests", "MrGunnChartData.EvmLayer.Tests\MrGunnChartData.EvmLayer.Tests.csproj", "{D7641633-BC24-4A45-9A0D-EEEF694DC609}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrGunnChartData.EvmLayer.Tests", "MrGunnChartData.EvmLayer.Tests\MrGunnChartData.EvmLayer.Tests.csproj", "{D7641633-BC24-4A45-9A0D-EEEF694DC609}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MrGunnChartData.Utilities", "MrGunnChartData.Utilities\MrGunnChartData.Utilities.csproj", "{F7C855D5-39E1-4074-B107-CC0A3DE8F4EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{D7641633-BC24-4A45-9A0D-EEEF694DC609}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7641633-BC24-4A45-9A0D-EEEF694DC609}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7641633-BC24-4A45-9A0D-EEEF694DC609}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7C855D5-39E1-4074-B107-CC0A3DE8F4EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7C855D5-39E1-4074-B107-CC0A3DE8F4EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7C855D5-39E1-4074-B107-CC0A3DE8F4EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7C855D5-39E1-4074-B107-CC0A3DE8F4EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,6 @@
 using MrGunnChartData.DataLayer;
+using MrGunnChartData.Utilities;
+using MrGunnChartData.EvmLayer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IPlsTimeChartRepository, PlsTimeChartRepository>();
+builder.Services.AddScoped<IReadContract, ReadContract>();
+builder.Services.AddScoped<IJsonUtility, JsonUtility>();
 
 var app = builder.Build();
 

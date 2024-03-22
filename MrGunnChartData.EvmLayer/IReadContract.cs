@@ -2,7 +2,7 @@
 {
     public interface IReadContract
     {
-        long ReturnTotalSupply();
-        long HexToDecimal(string HexNumber);
+        long ReturnPlsEarned100KTime(long lastPlsEarned);
+        string HexToDecimal(string HexNumber);
     }
 }

@@ -11,8 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MrGunnChartData.DataLayer\MrGunnChartData.DataLayer.csproj" />
-    <ProjectReference Include="..\MrGunnChartData.Service\MrGunnChartData.Service.csproj" />
+    <ProjectReference Include="..\MrGunnChartData.Utilities\MrGunnChartData.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

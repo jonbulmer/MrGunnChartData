@@ -1,7 +1,7 @@
 ﻿using MrGunnChartData.EvmLayer;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics.CodeAnalysis;
-using MrGunnChartData.DataLayer;
+using MrGunnChartData.Utilities;
 
 namespace MrGunnChartData.EvmLayer.Tests;
 
@@ -21,7 +21,7 @@ public static class Helper
         var services = new ServiceCollection();
 
         services.AddTransient<IReadContract, ReadContract>();
-        services.AddTransient<IPlsTimeChartRepository, PlsTimeChartRepository>();
+        services.AddTransient<IJsonUtility, JsonUtility>();
 
         return services.BuildServiceProvider();
     }
