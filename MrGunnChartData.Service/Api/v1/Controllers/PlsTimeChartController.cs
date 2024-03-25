@@ -17,7 +17,7 @@ namespace MrGunnChartData.Service.Api.v1
         }
 
         [HttpGet(Name = "get_pls_time_data")]
-        public IEnumerable<PlsTimeDataDto> Get()
+        public IEnumerable<PlsTimeDataWriteDto> Get()
         {
             
             Console.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));

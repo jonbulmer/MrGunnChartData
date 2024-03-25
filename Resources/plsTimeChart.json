@@ -694,60 +694,81 @@
       "PlsReturn": "0.07"
     },
 	{
-	  "Date":"2024-03-15",
+	    "Date":"2024-03-15",
       "PlsPrice":"0.0001492",
       "TimeDividendPrice":"0.002864",
-	  "PlsEarned100KTime": "374",
+	    "PlsEarned100KTime": "374",
       "PlsReturn":"0.05"
     },
     {
       "Date":"2024-03-16",
       "PlsPrice":"0.0001452",
       "TimeDividendPrice":"0.002991",
-	  "PlsEarned100KTime": "329",	
+	    "PlsEarned100KTime": "329",	
       "PlsReturn":"0.04"
     },
     {
       "Date":"2024-03-17",
       "PlsPrice":"0.0001270",
       "TimeDividendPrice":"0.002991",
-	  "PlsEarned100KTime": "556",
+	    "PlsEarned100KTime": "556",
       "PlsReturn":"0.07"
     },
     {
       "Date":"2024-03-18",
       "PlsPrice":"0.0001297",
       "TimeDividendPrice":"0.002956",
-	  "PlsEarned100KTime": "1360",
+	    "PlsEarned100KTime": "1360",
       "PlsReturn":"0.17"
     },
     {
       "Date":"2024-03-19",
       "PlsPrice":"0.0001216",
       "TimeDividendPrice":"0.002891",
-	  "PlsEarned100KTime":"410",
+	    "PlsEarned100KTime":"410",
       "PlsReturn":"0.04"
     },
     {
       "Date":"2024-03-20",
       "PlsPrice":"0.0001105",
       "TimeDividendPrice":"0.002613",
-	  "PlsEarned100KTime":"979",
+	    "PlsEarned100KTime":"979",
       "PlsReturn":"0.10"
     },
     {
       "Date":"2024-03-21",
       "PlsPrice":"0.0001276",
       "TimeDividendPrice":"0.003143",
-	  "PlsEarned100KTime":"438",
+	    "PlsEarned100KTime":"438",
       "PlsReturn":"0.05"
     },
     {
       "Date":"2024-03-22",
       "PlsPrice":"0.0001217",
       "TimeDividendPrice":"0.003064",
-	  "PlsEarned100KTime":"213",	  
+	    "PlsEarned100KTime":"213",	  
       "PlsReturn":"0.02"
+    },
+    {
+      "Date": "2024-03-23",
+      "PlsPrice": "0.0001111",
+      "TimeDividendPrice": "0.002687",
+      "PlsEarned100KTime": "227",
+      "PlsReturn": "0.02"
+    },
+    {
+      "Date": "2024-03-24",
+      "PlsPrice": "0.0001126",
+      "TimeDividendPrice": "0.002402",
+	    "PlsEarned100KTime": "179",
+      "PlsReturn": "0.02"
+    },
+    {
+      "Date":"2024-03-25",
+      "PlsPrice":"0.0001157",
+      "TimeDividendPrice":"0.002520",
+	    "PlsEarned100KTime": "741",	  
+      "PlsReturn":"0.08"
     }
   ]
 }

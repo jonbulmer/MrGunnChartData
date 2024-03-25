@@ -19,12 +19,12 @@ namespace MrGunnChartData.DataLayer
         private readonly IJsonUtility _jsonUtility;
         private readonly IReadContract _readContract;
 
-        public PlsTimeChartRepository(IJsonUtility jsonUtility, IReadContract readContract)
+         public PlsTimeChartRepository(IJsonUtility jsonUtility, IReadContract readContract)
         {
             _jsonUtility = jsonUtility;
             _readContract = readContract;
         }
-        public List<PlsTimeDataDto> ReadPlsTimeChartData()
+        public List<PlsTimeDataWriteDto> ReadPlsTimeChartData()
         {
             // I need code to a hook into the the contract calls to get the data
 
@@ -41,19 +41,24 @@ namespace MrGunnChartData.DataLayer
             var plsPrice = timeDividendPrice / currentLiquidity.Pairs.First().PriceNative;
 
             var originalPlsTimeData = ReadAndReturnJsonData("plsTimeChart");
-            var lastPlsEarned = originalPlsTimeData.Last().PlsEarned100KTime;
-            var newPlsEarned = _readContract.ReturnPlsEarned100KTime(lastPlsEarned);
+            var pls100K = originalPlsTimeData.Sum(x => int.Parse(x.PlsEarned100KTime));
+            double lastPlsEarned = (double)pls100K / 100;
+            lastPlsEarned = lastPlsEarned * 137;
+            lastPlsEarned = lastPlsEarned + 27048;
+            var newPlsEarned = _readContract.ReturnPlsEarned100KTime((long)lastPlsEarned);
 
-            originalPlsTimeData.Add(new PlsTimeDataDto() 
+            originalPlsTimeData.Add(new PlsTimeDataWriteDto() 
                     { 
-                        Date = DateTime.Now,
-                        PlsEarned100KTime = newPlsEarned, 
-                        PlsPrice = plsPrice, 
-                        PlsReturn = plsPrice * newPlsEarned, 
-                        TimeDividendPrice = timeDividendPrice  
+                        Date = DateTime.Now.ToString("yyyy-MM-dd"),
+                        PlsEarned100KTime = newPlsEarned.ToString(), 
+                        PlsPrice = plsPrice.ToString(), 
+                        PlsReturn = (plsPrice * newPlsEarned).ToString(), 
+                        TimeDividendPrice = timeDividendPrice.ToString()  
                     });
 
-            var jsonToOutput = JsonConvert.SerializeObject(originalPlsTimeData, Formatting.Indented);
+            var jsonToOutput = "{\r\n \"plsTimeDataDtos\": ";
+            jsonToOutput = jsonToOutput + JsonConvert.SerializeObject(originalPlsTimeData, Formatting.Indented);
+            jsonToOutput = jsonToOutput + "\r\n}";
 
             string currentdirectory = Directory.GetParent(System.Environment.CurrentDirectory).FullName;
 
@@ -62,7 +67,7 @@ namespace MrGunnChartData.DataLayer
             File.WriteAllText(filepath , jsonToOutput);
         }
 
-        private List<PlsTimeDataDto> ReadAndReturnJsonData(string jsonFileName)
+        private List<PlsTimeDataWriteDto> ReadAndReturnJsonData(string jsonFileName)
         {
             var jsonChart = _jsonUtility.ReturnJson(jsonFileName);
 

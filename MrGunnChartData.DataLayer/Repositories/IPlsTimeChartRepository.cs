@@ -8,7 +8,8 @@ namespace MrGunnChartData.DataLayer
 {
     public interface IPlsTimeChartRepository
     {
-        List<PlsTimeDataDto> ReadPlsTimeChartData();
+        void AddPlsTimeChartData();
+        List<PlsTimeDataWriteDto> ReadPlsTimeChartData();
         LiquidityPairs GetCurrentLiquidyParirs();
     }
 }
