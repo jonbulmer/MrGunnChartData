@@ -20,3 +20,7 @@
 /MrGunnChartData.EvmLayer.Tests/obj
 /MrGunnChartData.Utilities/bin/Debug/net6.0
 /MrGunnChartData.Utilities/obj
+/MrGunnChartData.DataLayer.Test/bin/Debug
+/MrGunnChartData.DataLayer.Test/obj
+/MrGunnChartData.GetterLayer/bin/Debug
+/MrGunnChartData.GetterLayer/obj
