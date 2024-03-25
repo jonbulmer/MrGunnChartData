@@ -24,3 +24,9 @@
 /MrGunnChartData.DataLayer.Test/obj
 /MrGunnChartData.GetterLayer/bin/Debug
 /MrGunnChartData.GetterLayer/obj
+/MrGunnChartData.GetterLayer/bin/Release/net6.0
+/MrGunnChartData.Utilities/bin/Release/net6.0
+/MrGunnChartData.EvmLayer/bin/Release/net6.0
+/MrGunnChartData.DataLayer.Test/bin/Release/net6.0
+/MrGunnChartData.EvmLayer.Tests/bin/Release/net6.0
+/MrGunnChartData.GetterLayer/Properties/PublishProfiles

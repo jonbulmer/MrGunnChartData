@@ -47,7 +47,7 @@ namespace MrGunnChartData.EvmLayer
 
             var result = Convert.ToDouble(decimalReturn.Substring(0, decimalReturn.Length - 18));
 
-            result = (result / 137 * 100) - lastPlsEarned; 
+            result = (result - lastPlsEarned) / 137 * 100;
 
             return (long)Math.Floor(result);
         }
