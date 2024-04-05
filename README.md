@@ -5,9 +5,9 @@ Web API that shares chart data in json format
 
 Fields 
 - Date 
-- PLS price
-- TIME Dividend price
-- PLS earned for 100000 Time
+- PlsPrice
+- TimeDividendPrice
+- PlsEarned100KTime
 
 ## Source data
 

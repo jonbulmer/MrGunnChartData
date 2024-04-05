@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MrGunnChartData.EvmLayer\MrGunnChartData.EvmLayer.csproj" />
+    <ProjectReference Include="..\MrGunnChartData.Utilities\MrGunnChartData.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Models\PlsTimeDataDto.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+</Project>

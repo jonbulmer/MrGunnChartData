@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1.0.0",
+  "pairs": [
+    {
+      "chainId": "pulsechain",
+      "dexId": "pulsex",
+      "url": "https://dexscreener.com/pulsechain/0xefab2c9c33c42960f2ff653adb39dc5c4c10630e",
+      "pairAddress": "0xEFab2c9c33C42960F2fF653aDb39dC5C4c10630e",
+      "labels": [ "v2" ],
+      "baseToken": {
+        "address": "0xCA35638A3fdDD02fEC597D8c1681198C06b23F58",
+        "name": "T.I.M.E. Dividend",
+        "symbol": "TIME"
+      },
+      "quoteToken": {
+        "address": "0xA1077a294dDE1B09bB078844df40758a5D0f9a27",
+        "name": "Wrapped Pulse",
+        "symbol": "WPLS"
+      },
+      "priceNative": "23.5925",
+      "priceUsd": "0.002754",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 13,
+          "sells": 11
+        },
+        "h24": {
+          "buys": 86,
+          "sells": 87
+        }
+      },
+      "volume": {
+        "h24": 34917.47,
+        "h6": 5855.16,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": -0.59,
+        "h24": 5.56
+      },
+      "liquidity": {
+        "usd": 106231.64,
+        "base": 19285013,
+        "quote": 454982297
+      },
+      "fdv": 5504285,
+      "pairCreatedAt": 1685652985000,
+      "info": {
+        "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/pulsechain/0xca35638a3fddd02fec597d8c1681198c06b23f58.png",
+        "websites": [
+          {
+            "label": "Website",
+            "url": "https://internetmoney.io/"
+          },
+          {
+            "label": "Docs",
+            "url": "https://internetmoney.io/opensource"
+          },
+          {
+            "label": "Download Wallet (iOS)",
+            "url": "https://internetmoney.io/ios"
+          },
+          {
+            "label": "Download Wallet (Android)",
+            "url": "https://internetmoney.io/android"
+          },
+          {
+            "label": "Download Wallet (Chrome)",
+            "url": "https://internetmoney.io/chrome"
+          },
+          {
+            "label": "YouTube",
+            "url": "https://www.youtube.com/internetmoneyio"
+          },
+          {
+            "label": "Reddit",
+            "url": "https://www.reddit.com/r/internetmoneyio/"
+          }
+        ],
+        "socials": [
+          {
+            "type": "twitter",
+            "url": "https://x.com/InternetMoneyio"
+          },
+          {
+            "type": "telegram",
+            "url": "https://t.me/internetmoneyio"
+          }
+        ]
+      }
+    }
+  ],
+  "pair": {
+    "chainId": "pulsechain",
+    "dexId": "pulsex",
+    "url": "https://dexscreener.com/pulsechain/0xefab2c9c33c42960f2ff653adb39dc5c4c10630e",
+    "pairAddress": "0xEFab2c9c33C42960F2fF653aDb39dC5C4c10630e",
+    "labels": [ "v2" ],
+    "baseToken": {
+      "address": "0xCA35638A3fdDD02fEC597D8c1681198C06b23F58",
+      "name": "T.I.M.E. Dividend",
+      "symbol": "TIME"
+    },
+    "quoteToken": {
+      "address": "0xA1077a294dDE1B09bB078844df40758a5D0f9a27",
+      "name": "Wrapped Pulse",
+      "symbol": "WPLS"
+    },
+    "priceNative": "23.5925",
+    "priceUsd": "0.002754",
+    "txns": {
+      "m5": {
+        "buys": 0,
+        "sells": 0
+      },
+      "h1": {
+        "buys": 0,
+        "sells": 0
+      },
+      "h6": {
+        "buys": 13,
+        "sells": 11
+      },
+      "h24": {
+        "buys": 86,
+        "sells": 87
+      }
+    },
+    "volume": {
+      "h24": 34917.47,
+      "h6": 5855.16,
+      "h1": 0,
+      "m5": 0
+    },
+    "priceChange": {
+      "m5": 0,
+      "h1": 0,
+      "h6": -0.59,
+      "h24": 5.56
+    },
+    "liquidity": {
+      "usd": 106231.64,
+      "base": 19285013,
+      "quote": 454982297
+    },
+    "fdv": 5504285,
+    "pairCreatedAt": 1685652985000,
+    "info": {
+      "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/pulsechain/0xca35638a3fddd02fec597d8c1681198c06b23f58.png",
+      "websites": [
+        {
+          "label": "Website",
+          "url": "https://internetmoney.io/"
+        },
+        {
+          "label": "Docs",
+          "url": "https://internetmoney.io/opensource"
+        },
+        {
+          "label": "Download Wallet (iOS)",
+          "url": "https://internetmoney.io/ios"
+        },
+        {
+          "label": "Download Wallet (Android)",
+          "url": "https://internetmoney.io/android"
+        },
+        {
+          "label": "Download Wallet (Chrome)",
+          "url": "https://internetmoney.io/chrome"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/internetmoneyio"
+        },
+        {
+          "label": "Reddit",
+          "url": "https://www.reddit.com/r/internetmoneyio/"
+        }
+      ],
+      "socials": [
+        {
+          "type": "twitter",
+          "url": "https://x.com/InternetMoneyio"
+        },
+        {
+          "type": "telegram",
+          "url": "https://t.me/internetmoneyio"
+        }
+      ]
+    }
+  }
+}
