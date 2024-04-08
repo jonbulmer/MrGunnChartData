@@ -51,9 +51,9 @@ namespace MrGunnChartData.DataLayer
                     { 
                         Date = DateTime.Now.ToString("yyyy-MM-dd"),
                         PlsEarned100KTime = newPlsEarned.ToString(), 
-                        PlsPrice = plsPrice.ToString(), 
+                        PlsPrice = plsPrice.ToString("0.0000000"), 
                         PlsReturn = (plsPrice * newPlsEarned).ToString(), 
-                        TimeDividendPrice = timeDividendPrice.ToString()  
+                        TimeDividendPrice = timeDividendPrice.ToString("0.00000")  
                     });
 
             var jsonToOutput = "{\r\n \"plsTimeDataDtos\": ";
