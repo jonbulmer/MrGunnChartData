@@ -4,7 +4,7 @@ using MrGunnChartData.DataLayer;
 namespace MrGunnChartData.Service.Api.v1
 {
     [ApiController]
-    [Route("api/[controller]/[Action]")]
+    [Route("[controller]/[Action]")]
     public class PlsTimeChartController : ControllerBase
     {
         private readonly ILogger<PlsTimeChartController> _logger;
