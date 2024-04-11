@@ -1,5 +1,5 @@
 {
-  "plsTimeDataDtos": [
+  "dataDtos": [
     {
       "Date": "2023-12-07",
       "PlsPrice": "0.00004961",
@@ -860,6 +860,27 @@
       "TimeDividendPrice": "0.002148",
       "PlsEarned100KTime": "516",
       "PlsReturn": "0.0499"
+    },
+    {
+      "date": "2024-04-08",
+      "plsPrice": "0.0000971",
+      "timeDividendPrice": "0.002167",
+      "plsEarned100KTime": "261",
+      "plsReturn": "0.0253"
+    },
+    {
+      "date": "2024-04-09",
+      "plsPrice": "0.0001021",
+      "timeDividendPrice": "0.002312",
+      "plsEarned100KTime": "1325",
+      "plsReturn": "0.13534"
+    },
+    {
+      "date": "2024-04-10",
+      "plsPrice": "0.0000956",
+      "timeDividendPrice": "0.002113",
+      "plsEarned100KTime": "1376",
+      "plsReturn": "0.13162"
     }
   ]
 }

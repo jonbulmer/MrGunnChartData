@@ -26,11 +26,8 @@ namespace MrGunnChartData.DataLayer
         }
         public List<PlsTimeDataWriteDto> ReadPlsTimeChartData()
         {
-            // I need code to a hook into the the contract calls to get the data
-
-            var result = new List<PlsTimeDataDto>();
-            
-            return ReadAndReturnJsonData("plsTimeChart");
+            List<PlsTimeDataWriteDto> chartPoints = new List<PlsTimeDataWriteDto>();
+            return ReadAndReturnJsonData("plsTimeChart", chartPoints);
         }
 
         public void AddPlsTimeChartData()
@@ -39,8 +36,8 @@ namespace MrGunnChartData.DataLayer
 
             var timeDividendPrice = currentLiquidity.Pairs.First().PriceUsd;
             var plsPrice = timeDividendPrice / currentLiquidity.Pairs.First().PriceNative;
-
-            var originalPlsTimeData = ReadAndReturnJsonData("plsTimeChart");
+            List<PlsTimeDataWriteDto> chartPoints = new List<PlsTimeDataWriteDto>();
+            var originalPlsTimeData = ReadAndReturnJsonData("plsTimeChart", chartPoints);
             var pls100K = originalPlsTimeData.Sum(x => int.Parse(x.PlsEarned100KTime));
             double lastPlsEarned = (double)pls100K / 100;
             lastPlsEarned = lastPlsEarned * 137;
@@ -67,16 +64,11 @@ namespace MrGunnChartData.DataLayer
             File.WriteAllText(filepath , jsonToOutput);
         }
 
-        private List<PlsTimeDataWriteDto> ReadAndReturnJsonData(string jsonFileName)
+        private List<TDto> ReadAndReturnJsonData<TDto>(string jsonFileName, List<TDto> chartPoints)
         {
             var jsonChart = _jsonUtility.ReturnJson(jsonFileName);
 
-            var chartPoints = JsonConvert.DeserializeObject<PlsTimeDataList>(jsonChart).plsTimeDataDtos.ToList();
-            
-
-            //for (var j = 0; j < chartPoints.Count(); j++)
-            //{
-            //}
+            chartPoints = JsonConvert.DeserializeObject<DataList<TDto>>(jsonChart).dataDtos.ToList();
 
             return chartPoints;
         }
