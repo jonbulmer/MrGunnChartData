@@ -30,6 +30,12 @@ namespace MrGunnChartData.DataLayer
             return ReadAndReturnJsonData("plsTimeChart", chartPoints);
         }
 
+        public List<TimeChartDataWriteDto> ReadTimeDividendChartData()
+        {
+            List<TimeChartDataWriteDto> chartPoints = new List<TimeChartDataWriteDto>();
+            return ReadAndReturnJsonData("TIMEDividendChartData", chartPoints);
+        }
+
         public void AddPlsTimeChartData()
         {
             var currentLiquidity = GetCurrentLiquidyParirs();

@@ -4,7 +4,7 @@ using MrGunnChartData.DataLayer;
 namespace MrGunnChartData.Service.Api.v1
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]/[Action]")]
     public class PlsTimeChartController : ControllerBase
     {
         private readonly ILogger<PlsTimeChartController> _logger;
@@ -19,11 +19,14 @@ namespace MrGunnChartData.Service.Api.v1
         [HttpGet(Name = "get_pls_time_data")]
         public IEnumerable<PlsTimeDataWriteDto> Get()
         {
-            
-            Console.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
-            Console.WriteLine(AppContext.BaseDirectory);
-
             return _plsTimeChartRepository.ReadPlsTimeChartData()
+            .ToArray();
+        }
+
+        [HttpGet(Name = "get_time_chart_data")]
+        public IEnumerable<TimeChartDataWriteDto> GetT()
+        {
+            return _plsTimeChartRepository.ReadTimeDividendChartData()
             .ToArray();
         }
     }
