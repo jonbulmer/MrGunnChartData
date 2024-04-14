@@ -31,6 +31,8 @@ namespace MrGunnChartData.DataLayer
 
     public class TimeChartDataWriteDto
     {
+        internal int pls;
+
         public string Date { get; set; }
         public string Pls { get; set; }
         public string Time { get; set; }

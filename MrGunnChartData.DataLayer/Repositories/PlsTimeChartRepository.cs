@@ -55,11 +55,11 @@ namespace MrGunnChartData.DataLayer
                         Date = DateTime.Now.ToString("yyyy-MM-dd"),
                         PlsEarned100KTime = newPlsEarned.ToString(), 
                         PlsPrice = plsPrice.ToString("0.0000000"), 
-                        PlsReturn = (plsPrice * newPlsEarned).ToString(), 
+                        PlsReturn = (plsPrice * newPlsEarned).ToString("0.00000"), 
                         TimeDividendPrice = timeDividendPrice.ToString("0.00000")  
                     });
 
-            var jsonToOutput = "{\r\n \"plsTimeDataDtos\": ";
+            var jsonToOutput = "{\r\n \"dataDtos\": ";
             jsonToOutput = jsonToOutput + JsonConvert.SerializeObject(originalPlsTimeData, Formatting.Indented);
             jsonToOutput = jsonToOutput + "\r\n}";
 
@@ -68,6 +68,39 @@ namespace MrGunnChartData.DataLayer
             var filepath = currentdirectory + "/Resources/" + "plsTimeChart" + ".json";
 
             File.WriteAllText(filepath , jsonToOutput);
+        }
+
+        public void AddTimeDividendChartData()
+        {
+            var currentLiquidity = GetCurrentLiquidyParirs();
+
+            var timeDividendPrice = currentLiquidity.Pairs.First().PriceUsd;
+            var plsPrice = timeDividendPrice / currentLiquidity.Pairs.First().PriceNative;
+            List<TimeChartDataWriteDto> chartPoints = new List<TimeChartDataWriteDto>();
+            var originalTimeChartData = ReadAndReturnJsonData("TIMEDividendChartData", chartPoints);
+
+            var totalPlsEarned = float.Parse(originalTimeChartData.Last().Return) / float.Parse(originalTimeChartData.Last().Pls);
+            List<PlsTimeDataWriteDto> nextChartPoints = new List<PlsTimeDataWriteDto>();
+            var dailyPlsEarned = double.Parse(ReadAndReturnJsonData("plsTimeChart", nextChartPoints).Last().PlsReturn) * 1.79;
+            totalPlsEarned = (totalPlsEarned + ((float)dailyPlsEarned / plsPrice)) * plsPrice;
+            
+            originalTimeChartData.Add(new TimeChartDataWriteDto()
+                    { 
+                        Date = DateTime.Now.ToString("yyyy-MM-dd"),
+                        Pls = plsPrice.ToString("0.0000000"),
+                        Time = timeDividendPrice.ToString("0.00000"),
+                        Return = totalPlsEarned.ToString("0.00")
+                    });
+
+            var jsonToOutput = "{\r\n \"dataDtos\": ";
+            jsonToOutput = jsonToOutput + JsonConvert.SerializeObject(originalTimeChartData, Formatting.Indented);
+            jsonToOutput = jsonToOutput + "\r\n}";
+
+            string currentdirectory = Directory.GetParent(System.Environment.CurrentDirectory).FullName;
+
+            var filepath = currentdirectory + "/Resources/" + "TIMEDividendChartData" + ".json";
+
+            File.WriteAllText(filepath, jsonToOutput);
         }
 
         private List<TDto> ReadAndReturnJsonData<TDto>(string jsonFileName, List<TDto> chartPoints)
