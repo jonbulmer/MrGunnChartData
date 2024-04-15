@@ -24,6 +24,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrGunnChartData.DataLayer.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrGunnChartData.GetterLayer", "MrGunnChartData.GetterLayer\MrGunnChartData.GetterLayer.csproj", "{3C0EC18E-C840-4201-92DB-9E4B5D72E244}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BF7638A3-2D4A-4965-8A1E-CFCFE09DD444}"
+	ProjectSection(SolutionItems) = preProject
+		appsettings.json = appsettings.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

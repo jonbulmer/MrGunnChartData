@@ -19,6 +19,7 @@ namespace MrGunnChartData.Service.Api.v1
         [HttpGet(Name = "get_pls_time_data")]
         public IEnumerable<PlsTimeDataWriteDto> Get()
         {
+            _logger.LogInformation("plsTimeData returned");
             return _plsTimeChartRepository.ReadPlsTimeChartData()
             .ToArray();
         }
@@ -26,6 +27,7 @@ namespace MrGunnChartData.Service.Api.v1
         [HttpGet(Name = "get_time_chart_data")]
         public IEnumerable<TimeChartDataWriteDto> GetT()
         {
+            _logger.LogInformation("time chart data returned");
             return _plsTimeChartRepository.ReadTimeDividendChartData()
             .ToArray();
         }
