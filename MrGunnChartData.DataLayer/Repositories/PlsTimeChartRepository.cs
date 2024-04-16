@@ -26,21 +26,24 @@ namespace MrGunnChartData.DataLayer
         }
         public List<PlsTimeDataWriteDto> ReadPlsTimeChartData()
         {
-            // I need code to a hook into the the contract calls to get the data
+            List<PlsTimeDataWriteDto> chartPoints = new List<PlsTimeDataWriteDto>();
+            return ReadAndReturnJsonData("plsTimeChart", chartPoints);
+        }
 
-            var result = new List<PlsTimeDataDto>();
-            
-            return ReadAndReturnJsonData("plsTimeChart");
+        public List<TimeChartDataWriteDto> ReadTimeDividendChartData()
+        {
+            List<TimeChartDataWriteDto> chartPoints = new List<TimeChartDataWriteDto>();
+            return ReadAndReturnJsonData("TIMEDividendChartData", chartPoints);
         }
 
         public void AddPlsTimeChartData()
         {
-            var currentLiquidity = GetCurrentLiquidyParirs();
+            var currentLiquidity = GetCurrentLiquidyPairs();
 
             var timeDividendPrice = currentLiquidity.Pairs.First().PriceUsd;
             var plsPrice = timeDividendPrice / currentLiquidity.Pairs.First().PriceNative;
-
-            var originalPlsTimeData = ReadAndReturnJsonData("plsTimeChart");
+            List<PlsTimeDataWriteDto> chartPoints = new List<PlsTimeDataWriteDto>();
+            var originalPlsTimeData = ReadAndReturnJsonData("plsTimeChart", chartPoints);
             var pls100K = originalPlsTimeData.Sum(x => int.Parse(x.PlsEarned100KTime));
             double lastPlsEarned = (double)pls100K / 100;
             lastPlsEarned = lastPlsEarned * 137;
@@ -52,11 +55,11 @@ namespace MrGunnChartData.DataLayer
                         Date = DateTime.Now.ToString("yyyy-MM-dd"),
                         PlsEarned100KTime = newPlsEarned.ToString(), 
                         PlsPrice = plsPrice.ToString("0.0000000"), 
-                        PlsReturn = (plsPrice * newPlsEarned).ToString(), 
+                        PlsReturn = (plsPrice * newPlsEarned).ToString("0.00000"), 
                         TimeDividendPrice = timeDividendPrice.ToString("0.00000")  
                     });
 
-            var jsonToOutput = "{\r\n \"plsTimeDataDtos\": ";
+            var jsonToOutput = "{\r\n \"dataDtos\": ";
             jsonToOutput = jsonToOutput + JsonConvert.SerializeObject(originalPlsTimeData, Formatting.Indented);
             jsonToOutput = jsonToOutput + "\r\n}";
 
@@ -67,21 +70,49 @@ namespace MrGunnChartData.DataLayer
             File.WriteAllText(filepath , jsonToOutput);
         }
 
-        private List<PlsTimeDataWriteDto> ReadAndReturnJsonData(string jsonFileName)
+        public void AddTimeDividendChartData()
+        {
+            var currentLiquidity = GetCurrentLiquidyPairs();
+
+            var timeDividendPrice = currentLiquidity.Pairs.First().PriceUsd;
+            var plsPrice = timeDividendPrice / currentLiquidity.Pairs.First().PriceNative;
+            List<TimeChartDataWriteDto> chartPoints = new List<TimeChartDataWriteDto>();
+            var originalTimeChartData = ReadAndReturnJsonData("TIMEDividendChartData", chartPoints);
+
+            var totalPlsEarned = float.Parse(originalTimeChartData.Last().Return) / float.Parse(originalTimeChartData.Last().Pls);
+            List<PlsTimeDataWriteDto> nextChartPoints = new List<PlsTimeDataWriteDto>();
+            var dailyPlsEarned = double.Parse(ReadAndReturnJsonData("plsTimeChart", nextChartPoints).Last().PlsReturn) * 1.79;
+            totalPlsEarned = (totalPlsEarned + ((float)dailyPlsEarned / plsPrice)) * plsPrice;
+            
+            originalTimeChartData.Add(new TimeChartDataWriteDto()
+                    { 
+                        Date = DateTime.Now.ToString("yyyy-MM-dd"),
+                        Pls = plsPrice.ToString("0.0000000"),
+                        Time = timeDividendPrice.ToString("0.00000"),
+                        Return = totalPlsEarned.ToString("0.00")
+                    });
+
+            var jsonToOutput = "{\r\n \"dataDtos\": ";
+            jsonToOutput = jsonToOutput + JsonConvert.SerializeObject(originalTimeChartData, Formatting.Indented);
+            jsonToOutput = jsonToOutput + "\r\n}";
+
+            string currentdirectory = Directory.GetParent(System.Environment.CurrentDirectory).FullName;
+
+            var filepath = currentdirectory + "/Resources/" + "TIMEDividendChartData" + ".json";
+
+            File.WriteAllText(filepath, jsonToOutput);
+        }
+
+        private List<TDto> ReadAndReturnJsonData<TDto>(string jsonFileName, List<TDto> chartPoints)
         {
             var jsonChart = _jsonUtility.ReturnJson(jsonFileName);
 
-            var chartPoints = JsonConvert.DeserializeObject<PlsTimeDataList>(jsonChart).plsTimeDataDtos.ToList();
-            
-
-            //for (var j = 0; j < chartPoints.Count(); j++)
-            //{
-            //}
+            chartPoints = JsonConvert.DeserializeObject<DataList<TDto>>(jsonChart).dataDtos.ToList();
 
             return chartPoints;
         }
 
-        public LiquidityPairs GetCurrentLiquidyParirs()
+        public LiquidityPairs GetCurrentLiquidyPairs()
         {
             var url = "https://api.dexscreener.com/latest/dex/pairs/pulsechain/0xEFab2c9c33C42960F2fF653aDb39dC5C4c10630e";
 

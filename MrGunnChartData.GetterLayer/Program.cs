@@ -13,4 +13,6 @@ var builder = new ServiceCollection()
 PlsTimeChartRepository app = (PlsTimeChartRepository)builder.GetRequiredService<IPlsTimeChartRepository>();
 
 app.AddPlsTimeChartData();
-Console.WriteLine("Add PLS Time Chart Date");
+Console.WriteLine("Add PLS Time Chart Data");
+app.AddTimeDividendChartData();
+Console.WriteLine("Add TIME Dividend Chart Data");

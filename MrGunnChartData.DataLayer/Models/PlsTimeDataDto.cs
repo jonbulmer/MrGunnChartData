@@ -1,9 +1,9 @@
 namespace MrGunnChartData.DataLayer
 {
 
-    public class PlsTimeDataList
+    public class DataList<T>
     {
-        public List<PlsTimeDataWriteDto> plsTimeDataDtos { get; set; }  
+        public List<T> dataDtos { get; set; }
     }
     public class PlsTimeDataDto
     {
@@ -27,5 +27,15 @@ namespace MrGunnChartData.DataLayer
 
         public string PlsEarned100KTime { get; set; }
         public string PlsReturn { get; set; }
+    }
+
+    public class TimeChartDataWriteDto
+    {
+        internal int pls;
+
+        public string Date { get; set; }
+        public string Pls { get; set; }
+        public string Time { get; set; }
+        public string Return { get; set; }
     }
 }

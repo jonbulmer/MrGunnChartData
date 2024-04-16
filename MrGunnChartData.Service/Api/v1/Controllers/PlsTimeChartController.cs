@@ -4,26 +4,31 @@ using MrGunnChartData.DataLayer;
 namespace MrGunnChartData.Service.Api.v1
 {
     [ApiController]
-    [Route("[controller]")]
-    public class PlsTimeChartController : ControllerBase
+    [Route("v1/[controller]/[Action]")]
+    public class ChartsController : ControllerBase
     {
-        private readonly ILogger<PlsTimeChartController> _logger;
+        private readonly ILogger<ChartsController> _logger;
         private readonly IPlsTimeChartRepository _plsTimeChartRepository;    
 
-        public PlsTimeChartController(ILogger<PlsTimeChartController> logger, IPlsTimeChartRepository plsTimeChartRepository)
+        public ChartsController(ILogger<ChartsController> logger, IPlsTimeChartRepository plsTimeChartRepository)
         {
             _logger = logger;
             _plsTimeChartRepository = plsTimeChartRepository;
         }
 
         [HttpGet(Name = "get_pls_time_data")]
-        public IEnumerable<PlsTimeDataWriteDto> Get()
+        public IEnumerable<PlsTimeDataWriteDto> PlsTimeChart()
         {
-            
-            Console.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
-            Console.WriteLine(AppContext.BaseDirectory);
-
+            _logger.LogInformation("plsTimeData returned");
             return _plsTimeChartRepository.ReadPlsTimeChartData()
+            .ToArray();
+        }
+
+        [HttpGet(Name = "get_time_chart_data")]
+        public IEnumerable<TimeChartDataWriteDto> TimeChartData()
+        {
+            _logger.LogInformation("time chart data returned");
+            return _plsTimeChartRepository.ReadTimeDividendChartData()
             .ToArray();
         }
     }
