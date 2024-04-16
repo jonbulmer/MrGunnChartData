@@ -5,12 +5,12 @@ namespace MrGunnChartData.Service.Api.v1
 {
     [ApiController]
     [Route("v1/[controller]/[Action]")]
-    public class PlsTimeChartController : ControllerBase
+    public class ChartsController : ControllerBase
     {
-        private readonly ILogger<PlsTimeChartController> _logger;
+        private readonly ILogger<ChartsController> _logger;
         private readonly IPlsTimeChartRepository _plsTimeChartRepository;    
 
-        public PlsTimeChartController(ILogger<PlsTimeChartController> logger, IPlsTimeChartRepository plsTimeChartRepository)
+        public ChartsController(ILogger<ChartsController> logger, IPlsTimeChartRepository plsTimeChartRepository)
         {
             _logger = logger;
             _plsTimeChartRepository = plsTimeChartRepository;

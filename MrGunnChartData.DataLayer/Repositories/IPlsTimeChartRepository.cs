@@ -11,6 +11,6 @@ namespace MrGunnChartData.DataLayer
         void AddPlsTimeChartData();
         List<PlsTimeDataWriteDto> ReadPlsTimeChartData();
         public List<TimeChartDataWriteDto> ReadTimeDividendChartData();
-        LiquidityPairs GetCurrentLiquidyParirs();
+        LiquidityPairs GetCurrentLiquidyPairs();
     }
 }

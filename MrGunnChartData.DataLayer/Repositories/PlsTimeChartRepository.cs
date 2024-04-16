@@ -38,7 +38,7 @@ namespace MrGunnChartData.DataLayer
 
         public void AddPlsTimeChartData()
         {
-            var currentLiquidity = GetCurrentLiquidyParirs();
+            var currentLiquidity = GetCurrentLiquidyPairs();
 
             var timeDividendPrice = currentLiquidity.Pairs.First().PriceUsd;
             var plsPrice = timeDividendPrice / currentLiquidity.Pairs.First().PriceNative;
@@ -72,7 +72,7 @@ namespace MrGunnChartData.DataLayer
 
         public void AddTimeDividendChartData()
         {
-            var currentLiquidity = GetCurrentLiquidyParirs();
+            var currentLiquidity = GetCurrentLiquidyPairs();
 
             var timeDividendPrice = currentLiquidity.Pairs.First().PriceUsd;
             var plsPrice = timeDividendPrice / currentLiquidity.Pairs.First().PriceNative;
@@ -112,7 +112,7 @@ namespace MrGunnChartData.DataLayer
             return chartPoints;
         }
 
-        public LiquidityPairs GetCurrentLiquidyParirs()
+        public LiquidityPairs GetCurrentLiquidyPairs()
         {
             var url = "https://api.dexscreener.com/latest/dex/pairs/pulsechain/0xEFab2c9c33C42960F2fF653aDb39dC5C4c10630e";
 
