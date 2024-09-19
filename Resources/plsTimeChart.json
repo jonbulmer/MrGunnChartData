@@ -1700,6 +1700,321 @@
     "timeDividendPrice": "0.00083",
     "plsEarned100KTime": "214",
     "plsReturn": "0.00810"
+  },
+  {
+    "date": "2024-08-06",
+    "plsPrice": "0.0000389",
+    "timeDividendPrice": "0.00084",
+    "plsEarned100KTime": "345",
+    "plsReturn": "0.01341"
+  },
+  {
+    "date": "2024-08-07",
+    "plsPrice": "0.0000398",
+    "timeDividendPrice": "0.00086",
+    "plsEarned100KTime": "353",
+    "plsReturn": "0.01405"
+  },
+  {
+    "date": "2024-08-08",
+    "plsPrice": "0.0000356",
+    "timeDividendPrice": "0.00083",
+    "plsEarned100KTime": "1566",
+    "plsReturn": "0.05576"
+  },
+  {
+    "date": "2024-08-09",
+    "plsPrice": "0.0000375",
+    "timeDividendPrice": "0.00089",
+    "plsEarned100KTime": "166",
+    "plsReturn": "0.00623"
+  },
+  {
+    "date": "2024-08-10",
+    "plsPrice": "0.0000358",
+    "timeDividendPrice": "0.00085",
+    "plsEarned100KTime": "221",
+    "plsReturn": "0.00792"
+  },
+  {
+    "date": "2024-08-11",
+    "plsPrice": "0.0000362",
+    "timeDividendPrice": "0.00088",
+    "plsEarned100KTime": "104",
+    "plsReturn": "0.00376"
+  },
+  {
+    "date": "2024-08-12",
+    "plsPrice": "0.0000336",
+    "timeDividendPrice": "0.00082",
+    "plsEarned100KTime": "429",
+    "plsReturn": "0.01443"
+  },
+  {
+    "date": "2024-08-13",
+    "plsPrice": "0.0000353",
+    "timeDividendPrice": "0.00104",
+    "plsEarned100KTime": "245",
+    "plsReturn": "0.00866"
+  },
+  {
+    "date": "2024-08-14",
+    "plsPrice": "0.0000375",
+    "timeDividendPrice": "0.00117",
+    "plsEarned100KTime": "316",
+    "plsReturn": "0.01185"
+  },
+  {
+    "date": "2024-08-15",
+    "plsPrice": "0.0000363",
+    "timeDividendPrice": "0.00106",
+    "plsEarned100KTime": "81",
+    "plsReturn": "0.00294"
+  },
+  {
+    "date": "2024-08-16",
+    "plsPrice": "0.0000358",
+    "timeDividendPrice": "0.00106",
+    "plsEarned100KTime": "221",
+    "plsReturn": "0.00792"
+  },
+  {
+    "date": "2024-08-17",
+    "plsPrice": "0.0000365",
+    "timeDividendPrice": "0.00105",
+    "plsEarned100KTime": "93",
+    "plsReturn": "0.00340"
+  },
+  {
+    "date": "2024-08-18",
+    "plsPrice": "0.0000365",
+    "timeDividendPrice": "0.00103",
+    "plsEarned100KTime": "40",
+    "plsReturn": "0.00146"
+  },
+  {
+    "date": "2024-08-19",
+    "plsPrice": "0.0000362",
+    "timeDividendPrice": "0.00104",
+    "plsEarned100KTime": "421",
+    "plsReturn": "0.01525"
+  },
+  {
+    "date": "2024-08-20",
+    "plsPrice": "0.0000368",
+    "timeDividendPrice": "0.00104",
+    "plsEarned100KTime": "0",
+    "plsReturn": "0.00000"
+  },
+  {
+    "date": "2024-08-21",
+    "plsPrice": "0.0000362",
+    "timeDividendPrice": "0.00107",
+    "plsEarned100KTime": "689",
+    "plsReturn": "0.02491"
+  },
+  {
+    "date": "2024-08-22",
+    "plsPrice": "0.0000364",
+    "timeDividendPrice": "0.00100",
+    "plsEarned100KTime": "304",
+    "plsReturn": "0.01106"
+  },
+  {
+    "date": "2024-08-23",
+    "plsPrice": "0.0000367",
+    "timeDividendPrice": "0.00104",
+    "plsEarned100KTime": "176",
+    "plsReturn": "0.00647"
+  },
+  {
+    "date": "2024-08-24",
+    "plsPrice": "0.0000371",
+    "timeDividendPrice": "0.00106",
+    "plsEarned100KTime": "227",
+    "plsReturn": "0.00842"
+  },
+  {
+    "date": "2024-08-25",
+    "plsPrice": "0.0000374",
+    "timeDividendPrice": "0.00107",
+    "plsEarned100KTime": "48",
+    "plsReturn": "0.00179"
+  },
+  {
+    "date": "2024-08-26",
+    "plsPrice": "0.0000369",
+    "timeDividendPrice": "0.00111",
+    "plsEarned100KTime": "72",
+    "plsReturn": "0.00266"
+  },
+  {
+    "date": "2024-08-27",
+    "plsPrice": "0.0000364",
+    "timeDividendPrice": "0.00111",
+    "plsEarned100KTime": "1035",
+    "plsReturn": "0.03762"
+  },
+  {
+    "date": "2024-08-28",
+    "plsPrice": "0.0000352",
+    "timeDividendPrice": "0.00097",
+    "plsEarned100KTime": "236",
+    "plsReturn": "0.00831"
+  },
+  {
+    "date": "2024-08-29",
+    "plsPrice": "0.0000342",
+    "timeDividendPrice": "0.00093",
+    "plsEarned100KTime": "95",
+    "plsReturn": "0.00325"
+  },
+  {
+    "date": "2024-08-30",
+    "plsPrice": "0.0000337",
+    "timeDividendPrice": "0.00090",
+    "plsEarned100KTime": "205",
+    "plsReturn": "0.00691"
+  },
+  {
+    "date": "2024-08-31",
+    "plsPrice": "0.0000333",
+    "timeDividendPrice": "0.00089",
+    "plsEarned100KTime": "208",
+    "plsReturn": "0.00692"
+  },
+  {
+    "date": "2024-09-01",
+    "plsPrice": "0.0000336",
+    "timeDividendPrice": "0.00087",
+    "plsEarned100KTime": "182",
+    "plsReturn": "0.00612"
+  },
+  {
+    "date": "2024-09-02",
+    "plsPrice": "0.0000330",
+    "timeDividendPrice": "0.00085",
+    "plsEarned100KTime": "578",
+    "plsReturn": "0.01907"
+  },
+  {
+    "date": "2024-09-03",
+    "plsPrice": "0.0000326",
+    "timeDividendPrice": "0.00081",
+    "plsEarned100KTime": "370",
+    "plsReturn": "0.01207"
+  },
+  {
+    "date": "2024-09-04",
+    "plsPrice": "0.0000312",
+    "timeDividendPrice": "0.00080",
+    "plsEarned100KTime": "417",
+    "plsReturn": "0.01303"
+  },
+  {
+    "date": "2024-09-05",
+    "plsPrice": "0.0000326",
+    "timeDividendPrice": "0.00085",
+    "plsEarned100KTime": "371",
+    "plsReturn": "0.01209"
+  },
+  {
+    "date": "2024-09-06",
+    "plsPrice": "0.0000322",
+    "timeDividendPrice": "0.00085",
+    "plsEarned100KTime": "94",
+    "plsReturn": "0.00303"
+  },
+  {
+    "date": "2024-09-07",
+    "plsPrice": "0.0000324",
+    "timeDividendPrice": "0.00085",
+    "plsEarned100KTime": "273",
+    "plsReturn": "0.00884"
+  },
+  {
+    "date": "2024-09-08",
+    "plsPrice": "0.0000327",
+    "timeDividendPrice": "0.00085",
+    "plsEarned100KTime": "102",
+    "plsReturn": "0.00333"
+  },
+  {
+    "date": "2024-09-09",
+    "plsPrice": "0.0000327",
+    "timeDividendPrice": "0.00087",
+    "plsEarned100KTime": "272",
+    "plsReturn": "0.00889"
+  },
+  {
+    "date": "2024-09-10",
+    "plsPrice": "0.0000336",
+    "timeDividendPrice": "0.00085",
+    "plsEarned100KTime": "337",
+    "plsReturn": "0.01131"
+  },
+  {
+    "date": "2024-09-11",
+    "plsPrice": "0.0000346",
+    "timeDividendPrice": "0.00092",
+    "plsEarned100KTime": "398",
+    "plsReturn": "0.01378"
+  },
+  {
+    "date": "2024-09-12",
+    "plsPrice": "0.0000339",
+    "timeDividendPrice": "0.00086",
+    "plsEarned100KTime": "300",
+    "plsReturn": "0.01018"
+  },
+  {
+    "date": "2024-09-13",
+    "plsPrice": "0.0000377",
+    "timeDividendPrice": "0.00099",
+    "plsEarned100KTime": "602",
+    "plsReturn": "0.02270"
+  },
+  {
+    "date": "2024-09-14",
+    "plsPrice": "0.0000373",
+    "timeDividendPrice": "0.00101",
+    "plsEarned100KTime": "311",
+    "plsReturn": "0.01160"
+  },
+  {
+    "date": "2024-09-15",
+    "plsPrice": "0.0000387",
+    "timeDividendPrice": "0.00144",
+    "plsEarned100KTime": "458",
+    "plsReturn": "0.01774"
+  },
+  {
+    "date": "2024-09-16",
+    "plsPrice": "0.0000368",
+    "timeDividendPrice": "0.00131",
+    "plsEarned100KTime": "275",
+    "plsReturn": "0.01012"
+  },
+  {
+    "date": "2024-09-17",
+    "plsPrice": "0.0000364",
+    "timeDividendPrice": "0.00131",
+    "plsEarned100KTime": "139",
+    "plsReturn": "0.00506"
+  },
+  {
+    "date": "2024-09-18",
+    "plsPrice": "0.0000381",
+    "timeDividendPrice": "0.00136",
+    "plsEarned100KTime": "196",
+    "plsReturn": "0.00747"
+  },
+  {
+    "date": "2024-09-19",
+    "plsPrice": "0.0000411",
+    "timeDividendPrice": "0.00148",
+    "plsEarned100KTime": "483",
+    "plsReturn": "0.01987"
   }
   ]
 }
