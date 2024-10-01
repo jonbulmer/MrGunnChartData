@@ -2015,6 +2015,90 @@
     "timeDividendPrice": "0.00148",
     "plsEarned100KTime": "483",
     "plsReturn": "0.01987"
+  },
+  {
+    "date": "2024-09-20",
+    "plsPrice": "0.0000408",
+    "timeDividendPrice": "0.00135",
+    "plsEarned100KTime": "689",
+    "plsReturn": "0.02815"
+  },
+  {
+    "date": "2024-09-21",
+    "plsPrice": "0.0000447",
+    "timeDividendPrice": "0.00141",
+    "plsEarned100KTime": "489",
+    "plsReturn": "0.02187"
+  },
+  {
+    "date": "2024-09-22",
+    "plsPrice": "0.0000462",
+    "timeDividendPrice": "0.00146",
+    "plsEarned100KTime": "1070",
+    "plsReturn": "0.04940"
+  },
+  {
+    "date": "2024-09-23",
+    "plsPrice": "0.0000470",
+    "timeDividendPrice": "0.00146",
+    "plsEarned100KTime": "422",
+    "plsReturn": "0.01983"
+  },
+  {
+    "date": "2024-09-24",
+    "plsPrice": "0.0000460",
+    "timeDividendPrice": "0.00138",
+    "plsEarned100KTime": "829",
+    "plsReturn": "0.03811"
+  },
+  {
+    "date": "2024-09-25",
+    "plsPrice": "0.0000450",
+    "timeDividendPrice": "0.00137",
+    "plsEarned100KTime": "302",
+    "plsReturn": "0.01358"
+  },
+  {
+    "date": "2024-09-26",
+    "plsPrice": "0.0000441",
+    "timeDividendPrice": "0.00143",
+    "plsEarned100KTime": "532",
+    "plsReturn": "0.02346"
+  },
+  {
+    "date": "2024-09-27",
+    "plsPrice": "0.0000462",
+    "timeDividendPrice": "0.00151",
+    "plsEarned100KTime": "436",
+    "plsReturn": "0.02015"
+  },
+  {
+    "date": "2024-09-28",
+    "plsPrice": "0.0000477",
+    "timeDividendPrice": "0.00167",
+    "plsEarned100KTime": "681",
+    "plsReturn": "0.03248"
+  },
+  {
+    "date": "2024-09-29",
+    "plsPrice": "0.0000522",
+    "timeDividendPrice": "0.00192",
+    "plsEarned100KTime": "735",
+    "plsReturn": "0.03838"
+  },
+  {
+    "date": "2024-09-30",
+    "plsPrice": "0.0000541",
+    "timeDividendPrice": "0.00205",
+    "plsEarned100KTime": "989",
+    "plsReturn": "0.05346"
+  },
+  {
+    "date": "2024-10-01",
+    "plsPrice": "0.0000536",
+    "timeDividendPrice": "0.00200",
+    "plsEarned100KTime": "247",
+    "plsReturn": "0.01323"
   }
   ]
 }
